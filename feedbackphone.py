@@ -142,7 +142,7 @@ def exp_start(channel):
 
         # Wait for the recording to finish or for the switch hook to be pressed
         start_time = datetime.datetime.now()
-        while (datetime.datetime.now() - start_time).total_seconds() < 30 and GPIO.input(channel) == 1:
+        while (datetime.datetime.now() - start_time).total_seconds() < 60 and GPIO.input(channel) == 1:
             sleep(0.1)
 
         # Stop the recording
